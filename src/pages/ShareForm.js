@@ -76,9 +76,9 @@ const ShareForm = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/share/create', {
-        data: dataToSend
-      });
+     const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/share/create`, {
+  data: dataToSend
+});
       setResult(response.data);
     } catch (error) {
       console.error('Error generating link:', error);
