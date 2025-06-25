@@ -13,7 +13,7 @@ const SharePage = () => {
   const handleVerify = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/share/create`, {
+      const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/share/verify`, {
         shareId,
         pin
       });
